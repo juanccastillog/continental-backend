@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/continental-backend/static/css/main.6dea0f05.chunk.css",
+    "main.js": "/continental-backend/static/js/main.ee30a157.chunk.js",
+    "main.js.map": "/continental-backend/static/js/main.ee30a157.chunk.js.map",
+    "runtime-main.js": "/continental-backend/static/js/runtime-main.19135a66.js",
+    "runtime-main.js.map": "/continental-backend/static/js/runtime-main.19135a66.js.map",
+    "static/js/2.e18ae859.chunk.js": "/continental-backend/static/js/2.e18ae859.chunk.js",
+    "static/js/2.e18ae859.chunk.js.map": "/continental-backend/static/js/2.e18ae859.chunk.js.map",
+    "static/js/3.bcc47d22.chunk.js": "/continental-backend/static/js/3.bcc47d22.chunk.js",
+    "static/js/3.bcc47d22.chunk.js.map": "/continental-backend/static/js/3.bcc47d22.chunk.js.map",
+    "index.html": "/continental-backend/index.html",
+    "static/css/main.6dea0f05.chunk.css.map": "/continental-backend/static/css/main.6dea0f05.chunk.css.map",
+    "static/js/2.e18ae859.chunk.js.LICENSE.txt": "/continental-backend/static/js/2.e18ae859.chunk.js.LICENSE.txt",
+    "static/media/table.module.428b5e62.less": "/continental-backend/static/media/table.module.428b5e62.less"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.19135a66.js",
+    "static/js/2.e18ae859.chunk.js",
+    "static/css/main.6dea0f05.chunk.css",
+    "static/js/main.ee30a157.chunk.js"
+  ]
+}
