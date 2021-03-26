@@ -1,64 +1,71 @@
 .table {
-    max-width: 600px;
-    display: flex;
-    flex-direction: row;
-  }
-  
-  .playerscolumn {
-    list-style-type: none;
-    width: 15%;
-    display: flex;
-    flex-direction: column;
-    padding-inline-start: 0px;
-  }
-  
-  .dealscontainer {
-    width: 70%;
-    display: flex;
-    flex-direction: row;
-  }
-  
-  .dealcolumn {
-    width: 14.29%;
-    display: flex;
-    list-style-type: none;
-    flex-direction: column;
-    .dealheader {
-      display: flex;
-    }
-    li {
-      display : flex;
-      input {
-        display: flex;
-        max-width: 75%;
-      }
-    }
-  }
-  
-  .truncated {
-    display: inline;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis; 
-  }
-  
-  .nameheader {
-    .truncated();  
-  }
-  
-  .playername {
-    .truncated();
-  }
-  
+  max-width     : 1000px;
+  display       : flex;
+  flex-direction: row;
+}
+
+.playerscolumn {
+  list-style-type     : none;
+  min-width: 10%;
+  max-width               : 15%;
+  display             : flex;
+  flex-direction      : column;
+  padding-inline-start: 0px;
+}
+
+.dealscontainer {
+  width         : 60%;
+  display       : flex;
+  flex-direction: row;
+}
+
+.dealcolumn {
+  width          : 14.28%;
+  display        : flex;
+  list-style-type: none;
+  flex-direction : column;
+
   .dealheader {
-    .truncated();
+    display: flex;
   }
 
-  .resultcolumn {
-    width: 7.5%;
-    display: flex;
-    flex-direction: column;
-    .dealheader {
-      display: flex;
-    }
+  input {
+    height: 18px;
+    max-width: 100%;
+    text-align: right;
+    border-style: solid;
+    border-width: 1px;
+    border-color: black;
+    border-image: none;
+    padding: 0px;
   }
+}
+
+.truncated {
+  display      : inline;
+  white-space  : nowrap;
+  overflow     : hidden;
+  text-overflow: ellipsis;
+}
+
+.nameheader {
+  .truncated();
+}
+
+.playername {
+  .truncated();
+}
+
+.dealheader {
+  .truncated();
+}
+
+.resultcolumn {
+  width         : 7.5%;
+  display       : flex;
+  flex-direction: column;
+
+  .dealheader {
+    display: flex;
+  }
+}

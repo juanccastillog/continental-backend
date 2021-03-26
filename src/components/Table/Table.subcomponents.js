@@ -27,9 +27,7 @@ export const DealsColumns = ({ deals, onChangeScore }) =>
               (deals && deals[j] &&
                 deals[j].map(
                   (playerDeal) =>
-                    <li key={playerDeal.name}>
-                      <input type="number" value={playerDeal.value} onChange={e => onChangeScore({ dealIndex: j, name: playerDeal.name, value: e.target.value })} />
-                    </li>
+                    <input key={playerDeal.name} type="number" step="5" value={playerDeal.value} onChange={e => onChangeScore({ dealIndex: j, name: playerDeal.name, value: e.target.value })} />
                 )) || null
             }
           </div>
