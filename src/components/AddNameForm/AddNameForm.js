@@ -1,4 +1,6 @@
 import React from 'react';
+import { Spacer } from '../../components/Spacer';
+import styleClasses from './AddNameForm.module.less';
 
 export const AddNameForm = ({ label, onAddName }) => {
 
@@ -13,9 +15,10 @@ export const AddNameForm = ({ label, onAddName }) => {
     }
     return (
       <form onSubmit={handleSubmit}>
-        <label>
+        <label className={styleClasses.formLabel}>
           {label}
-          <input type="text" onChange={handleChange} value={name} />
+          <Spacer width="30px" />
+          <input type="text" onChange={handleChange} placeholder="Player name" value={name} />
         </label>
       </form>
     );

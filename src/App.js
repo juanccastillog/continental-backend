@@ -3,6 +3,7 @@ import { AddNameForm } from './components/AddNameForm/AddNameForm';
 import { Table } from './components/Table/Table';
 import { AppSubComp } from './App.subcomonents';
 import { getTableProps } from './components/Table/Table.props';
+import { Spacer } from './components/Spacer'
 
 
 
@@ -50,6 +51,7 @@ const App = () => {
   return (
     <AppSubComp.AppContainer>
       <AddNameForm label="Name" onAddName={onAddName} />
+      <Spacer height="20px" />
       <Table players={players} deals={deals} scoreSums={scoreSums} earningSums={earningSums} onChangeScore={handleChangeScore} onChangeWinner={handleChangeWinner} />
     </AppSubComp.AppContainer>
   );

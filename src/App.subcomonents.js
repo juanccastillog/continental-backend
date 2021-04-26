@@ -1,7 +1,7 @@
 import React from 'react';
 
 const AppContainer = ({children}) => 
-  <div style = {{margin: '10px'}} >
+  <div style = {{margin: '60px'}} >
     {children}
   </div>
 
