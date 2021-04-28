@@ -28,7 +28,13 @@ export const DealsColumns = ({ deals, onChangeScore }) =>
                 deals[j].map(
                   (playerDeal) =>
                     <div key={playerDeal.name} className={styles.inputcontainer}>
-                      <input type="number" step="5" value={playerDeal.value} onChange={e => onChangeScore({ dealIndex: j, name: playerDeal.name, value: e.target.value })} />
+                      <input
+                        type="number"
+                        step="5"
+                        value={playerDeal.value}
+                        onChange={e => onChangeScore({ dealIndex: j, name: playerDeal.name, value: e.target.value })}
+                        onFocus={e => e.preventDefault()}
+                      />
                     </div>
                 )) || null
             }
