@@ -13,7 +13,9 @@ const getPlayersDealsAndResults = (scores, winnerNames,
       scoreSum: score.deals.reduce((sum, currentDeal) => sum + (currentDeal.isSet ? currentDeal.score : 0), 0),
     }
   });
-  const totalScoreWinner = scoreSums.length > 0 && scoreSums.reduce((currentWinner, currentResult) =>
+
+  const allDealsSet = !scores.some(score => score.deals.some(deal => !deal.isSet))
+  const totalScoreWinner = scoreSums.length > 0 && allDealsSet && scoreSums.reduce((currentWinner, currentResult) =>
     currentResult.scoreSum < currentWinner.scoreSum ? currentResult : currentWinner);
 
   const earningSums = scores.map(score => {
@@ -23,7 +25,7 @@ const getPlayersDealsAndResults = (scores, winnerNames,
         currentWinnerName !== null ?
         (sum + ((currentWinnerName === score.name) ? dealEarnings[currentIndex] * (scores.length - 1) : - dealEarnings[currentIndex]))
         : sum, 0) +
-        ((score.name === totalScoreWinner.name) ? BestScoreEarning * (scores.length - 1) : -BestScoreEarning)
+        ((score.name === totalScoreWinner.name) ? BestScoreEarning * (scores.length - 1) : allDealsSet? -BestScoreEarning : 0)
     }
   });
 

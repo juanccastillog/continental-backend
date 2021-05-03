@@ -48,7 +48,7 @@ export const ScoreSumsColumn = ({ totals }) =>
     <div className={styles.dealheader}>{constants.resultsHeaders[0]}</div>
     {
       totals.map(total =>
-        <div key={total.name}>
+        <div className={styles.item} key={total.name}>
           {total.scoreSum}
         </div>)
     }
@@ -59,8 +59,8 @@ export const EarningSumsColumn = ({ earnings }) =>
     <div className={styles.dealheader}>{constants.resultsHeaders[1]}</div>
     {
       earnings.map(earning =>
-        <div key={earning.name}>
-          {earning.earningSum}
+        <div className={styles.item} key={earning.name}>
+          {new Intl.NumberFormat('es-CO', {style : 'currency', currency:'COP', minimumFractionDigits: 0}).format(earning.earningSum)}
         </div>)
     }
   </div>
